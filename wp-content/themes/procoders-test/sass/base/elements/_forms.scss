@@ -87,6 +87,7 @@ body{
 			width: 70px;
 		    padding: 0px;
 		    text-align: center;
+		    text-align: -webkit-center;
 		    border: 0px;
 		    outline: none;
 		    background-color: $color-background-light;
@@ -139,6 +140,9 @@ body{
 .field-group{
 	display: flex;
 	gap:15px;
+	@include media-down(xs){
+		flex-direction: column;
+	}
 	.wpcf7-form-control-wrap{
 		width: 100%;
 	}

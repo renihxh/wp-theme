@@ -36,7 +36,7 @@ if ($post_source == 'post') {
 					<?php 
 
 					foreach ($terms as $term){
-						echo '<div class="cards-grid cat-handler-js grid-sm-2 grid-md-3" id="posts_results_'.$term->term_id.'" name="'.$term->name.'" data-page_number="1"></div>';
+						echo '<div class="cards-grid cat-handler-js grid-sm-2 grid-md-3" id="posts_results_'.$term->term_id.'" data-name="'.$term->name.'" data-page_number="1"></div>';
 					}
 					
 					?>
