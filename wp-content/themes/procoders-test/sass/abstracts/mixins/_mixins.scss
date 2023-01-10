@@ -1,0 +1,20 @@
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+
+@mixin background-gradient{
+	background: rgb(238,18,81);
+	background: -moz-linear-gradient(5deg, rgba(238,18,81,1) 0%, rgba(103,41,193,1) 68.46%, rgba(29,53,253,1) 100%);
+	background: -webkit-linear-gradient(5deg, rgba(238,18,81,1) 0%, rgba(103,41,193,1) 68.46%, rgba(29,53,253,1) 100%);
+	background: linear-gradient(5deg, rgba(238,18,81,1) 0%, rgba(103,41,193,1) 68.46%, rgba(29,53,253,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ee1251",endColorstr="#1d35fd",GradientType=1);
+}

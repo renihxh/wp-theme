@@ -1,0 +1,148 @@
+.cf7-form-wrapper{
+	position: relative;
+	padding: 36px 26px;
+	@include media-down(xs){
+		padding: 30px 20px;
+	}
+	&:before{
+		content: '';
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(253.32deg, rgba(255, 255, 255, 0.25) -4.5%, #FFFFFF 106.31%);
+		opacity: 0.1;
+		border-radius: 10px;
+		transform: matrix(1, 0, 0, -1, 0, 0);
+		z-index: 0;
+	}
+}
+
+body{
+	input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea {
+	    color: $bg_blue;
+	    background: $white;
+	    border: 0px;
+	    border-radius: 0px;
+	    padding: 0px;
+	    &::-webkit-input-placeholder { /* Chrome */
+		  color: $bg_blue;
+		  transition: opacity 250ms ease-in-out;
+		}
+		&:focus::-webkit-input-placeholder {
+		  opacity: 0.5;
+		}
+		&::-ms-input-placeholder { /* IE 10+ */
+		  color: $bg_blue;
+		  transition: opacity 250ms ease-in-out;
+		}
+		&:focus:-ms-input-placeholder {
+		  opacity: 0.5;
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+		  color: $bg_blue;
+		  opacity: 1;
+		  transition: opacity 250ms ease-in-out;
+		}
+		&:focus::-moz-placeholder {
+		  opacity: 0.5;
+		}
+		&::-moz-placeholder { /* Firefox 4 - 18 */
+		  color: $bg_blue;
+		  opacity: 1;
+		  transition: opacity 250ms ease-in-out;
+		}
+		&:focus:-moz-placeholder {
+		  opacity: 0.5;
+		}
+	}
+	select, input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"] {
+		padding: 16px 15px 15px;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+		height: 55px;
+		outline: none!important;
+		width: 100%;
+		position: relative;
+		@include media-down(xs){
+			height: 46px;
+			padding: 11px 10px 10px;
+		}
+	}
+	.phone-number-wrapper{
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		.wpcf7-form-control-wrap:first-of-type{
+			flex-basis: 70px;
+		}
+		.wpcf7-form-control-wrap:last-of-type{
+			flex-basis: 100%;
+		}
+		select{
+			flex-basis: 70px;
+			width: 70px;
+		    padding: 0px;
+		    text-align: center;
+		    border: 0px;
+		    outline: none;
+		    background-color: $color-background-light;
+		    border-radius: 0px;
+		    -webkit-appearance: none;
+			-webkit-border-radius: 0;
+		}
+	}
+	.wpcf7-form{
+		display: flex;
+		flex-direction: column;
+		row-gap: 20px;
+		position: relative;
+		z-index: 3;
+		> p{
+			margin: 0px;
+			font-style: normal;
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 17px;
+			color: $white;
+			opacity: 0.7;
+			a{
+				color: $white ;
+			}
+		}
+	}
+}
+
+.submit-button-wrapper{
+	text-align: center;
+	margin-top: 10px;
+	position: relative;
+	.wpcf7-spinner{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		margin: 0px;
+	}
+}
+.submitting .submit-button-wrapper .wpcf7-submit{
+	color: rgba(255, 255, 255, .3);
+}
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
+    color: #fff;
+    text-align: center;
+}
+
+.field-group{
+	display: flex;
+	gap:15px;
+	.wpcf7-form-control-wrap{
+		width: 100%;
+	}
+}
+.cf7-form-wrapper .wpcf7-not-valid-tip{
+	color: #fff;
+}

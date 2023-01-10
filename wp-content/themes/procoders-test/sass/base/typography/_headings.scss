@@ -1,0 +1,38 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+}
+.text{
+
+}
+.color-white{
+	color: $white;
+}
+.color-black{
+	color: $black;
+}
+.color-dark{
+	color: $dark;
+}
+.color-grey{
+	color: $grey;
+}
+
+.title-lg{
+	font-weight: 700;
+	font-size: 64px;
+	line-height: 77px;
+	margin: 0px;
+	@include media-down(sm){
+		font-size: 50px;
+		line-height: 62px;
+	}
+	@include media-down(xs){
+		font-size: 34px;
+		line-height: 40px;
+	}
+}

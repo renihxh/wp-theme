@@ -1,0 +1,38 @@
+.site-footer{
+	background-color: $black;
+	padding-top: 50px;
+	padding-bottom: 87px;
+	color: $white;
+	.footer-logo{
+		margin-bottom: 24px;
+		a{
+			display: block;
+			img{
+				width: 100%;
+				max-width: 299px;
+				display: block;
+			}
+		}
+	}
+	.copyright-text{
+		p{
+			font-style: normal;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 17px;
+			margin: 0px;
+			+ p{
+				margin-top: 10px;
+			}
+		}
+	}
+	.bottom-text{
+		font-style: normal;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 19px;
+		p:last-of-type{
+			margin-bottom: 0px;
+		}
+	}
+}

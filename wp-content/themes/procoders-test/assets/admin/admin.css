@@ -1,0 +1,13 @@
+/* 
+ * Style used for admin panel
+ */
+.dashicons-theme-icon{
+    background-image: url('./logo_procoders.svg');
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 80px;
+    background-position-x: -18px;
+    background-repeat: no-repeat
+}

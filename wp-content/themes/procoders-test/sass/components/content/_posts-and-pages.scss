@@ -1,0 +1,40 @@
+.sticky {
+	display: block;
+}
+
+
+.updated:not(.published) {
+	display: none;
+}
+
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.section-space{
+	padding: 100px 0px;
+	@include media-down(sm){
+		padding: 75px 0px;
+	}
+	@include media-down(xs){
+		padding: 50px 0px;
+	}
+}
+
+.entry-footer{
+	span.edit-link {
+	    position: fixed;
+	    bottom: 0px;
+	    right: 0px;
+	    a{
+		    background-color: rgba(255,255,255,.4);
+		    padding: 3px 25px;
+		    border-radius: 4px;
+		    &:hover{
+		    	background-color:rgba(255,255,255,1);
+		    }
+	    }
+	}
+}

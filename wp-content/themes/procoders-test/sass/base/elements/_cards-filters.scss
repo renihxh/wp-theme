@@ -1,0 +1,174 @@
+.filter-tabs{
+	list-style: none;
+	display: flex;
+	gap:9px;
+	border: 2px solid $blue;
+	border-radius: 50px;
+	width: fit-content;
+	margin: 76px auto 37px;
+	padding: 2px;
+	@include media-down(xs){
+		margin-top: 50px;
+		margin-bottom: 30px;
+	}
+	&--switch{
+		color: $black;
+		border-radius: 50px;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+		padding: 8px 45px;
+	    min-width: 149px;
+	    text-align: center;
+	    cursor: pointer;
+		transition: all 400ms ease-in-out;
+		&:hover{
+			background: $grey;
+			color: $white;
+		}
+		&.active{
+			background: $red;
+			color: $white;
+		}
+	}
+}
+.cards-grid{
+	display: none;
+	grid-gap: 60px;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin-left: 100px;
+	margin-right: 100px;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	@include media-down(md){
+		margin-left: 50px;
+		margin-right: 50px;
+		grid-gap: 40px;
+	}
+	@include media-down(sm){
+		margin-left: 0px;
+		margin-right: 0px;
+		grid-gap: 25px;
+		grid-template-columns: 1fr 1fr;
+	}
+	@include media-down(xs){
+		margin-left: 0px;
+		margin-right: 0px;
+		grid-gap: 15px;
+	}
+	&.active{
+		display: grid;
+		opacity: 1;
+		visibility: visible;
+		position: relative;	
+	}
+	.cards-grid-item{
+		display: none;
+	}
+}
+.card{
+	padding: 41px 13px 46px;
+	position: relative;
+	display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    text-decoration: none;
+    row-gap: 28px;
+	border-radius: 10px;
+	text-decoration: none;
+	height: 100%;
+	@include background-gradient();
+	transition: all 400ms ease-in-out;
+	@include media-down(xs){
+		padding: 30px 10px 35px;
+	}
+	&:before{
+		content: '';
+		position: absolute;
+		background-color: #fff;
+		width: calc(100%  - 4px);
+		height: calc(100%  - 4px);
+		left: 2px;
+		top: 2px;
+		border-radius: 10px;
+		opacity: 1;
+		visibility: visible;
+		transition: all 400ms ease-in-out;
+	}
+	
+	&-icon{
+		position: relative;
+		z-index: 2;
+		width: 60px;
+		height: 60px;
+		display: block;
+		margin: 0 auto;
+		@include media-down(xs){
+			width: 50px;
+			height: 50px;
+		}
+		.icon{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			object-fit: contain;
+		}
+		.icon.icon-white{
+			opacity: 0;
+			visibility: hidden;
+		}
+		.icon.icon-color{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	&-body{
+		position: relative;
+		z-index: 2;
+		color: $dark;
+		.card-info{
+			margin: 0px;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 24px;
+			text-align: center;
+			@include media-down(xs){
+				font-size: 16px;
+    			line-height: 20px;
+			}
+		}
+	}
+	&:hover, &.active{
+		&:before{
+			transition: all 400ms ease-in-out;
+			visibility: hidden;
+			opacity: 0;
+		}
+		.card-icon{
+			.icon.icon-color{
+				opacity: 0;
+				visibility: hidden;
+			}
+			.icon.icon-white{
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		.card-body{
+			transition: all 400ms ease-in-out;
+
+			color: $white;
+		}
+	}
+}
+
+.button-wrapper{
+	display: block;
+	.btn-load-more{
+	    margin-top: 64px;
+	    margin-bottom: 51px;
+	    min-width: 263px;
+	    text-align: center;
+	}
+}
